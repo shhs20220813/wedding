@@ -3,7 +3,6 @@
 <template>
   <div id="kyong">
     <FlowerRain />
-    <IntroMovie />
     <Live />
     <Divider />
     <Gallery />
@@ -14,29 +13,16 @@
     <Divider />
     <Funding />
     <Divider />
-    <div style="display: none">
-      <Credit />
-    </div>
-    <BottomSheet
-      :is-open="isOpen"
-      @close="handleClose"
-      v-scroll-lock="isOpen"
-      :present="selectedPresent"
-    />
   </div>
 </template>
 
 <script>
-import IntroMovie from "./components/IntroMovie.vue";
 import Live from "./components/Live.vue";
 import Gallery from "./components/Gallery.vue";
 import Funding from "./components/Funding.vue";
-import Credit from "./components/Credit.vue";
 import Celebrate from "./components/Celebrate.vue";
 import Map from "./components/Map.vue";
 import FlowerRain from "./components/FlowerRain.vue";
-import BottomSheet from "./components/BottomSheet.vue";
-import firebase from "firebase";
 
 export default {
   name: "App",
@@ -59,21 +45,8 @@ export default {
     };
   },
   created() {
-    this.loadPresents();
   },
   methods: {
-    loadPresents() {
-      const presentsRef = firebase.database().ref("presents");
-      presentsRef.on("value", (snapshot) => {
-        const presents = snapshot.val();
-        this.presents = presents.map((present, index) => {
-          return {
-            ...present,
-            id: index,
-          };
-        });
-      });
-    },
     handleClick(present) {
       this.isOpen = true;
       this.selectedPresent = present;
