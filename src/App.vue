@@ -3,6 +3,7 @@
 <template>
   <div id="kyong">
     <FlowerRain />
+    <Intro />
     <Live />
     <Divider />
     <Gallery />
@@ -17,6 +18,7 @@
 </template>
 
 <script>
+import Intro from "./components/Intro.vue"
 import Live from "./components/Live.vue";
 import Gallery from "./components/Gallery.vue";
 import Funding from "./components/Funding.vue";
@@ -27,14 +29,12 @@ import FlowerRain from "./components/FlowerRain.vue";
 export default {
   name: "App",
   components: {
-    IntroMovie,
+    Intro,
     Live,
     Gallery,
     Funding,
-    Credit,
     Celebrate,
     FlowerRain,
-    BottomSheet,
     Map,
   },
   data() {
