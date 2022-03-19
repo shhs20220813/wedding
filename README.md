@@ -1,3 +1,9 @@
+> forked from https://github.com/kimyoon21/wedding
+
+## Required
+```
+nodejs v16.9.1
+```
 
 ## Project setup
 ```
