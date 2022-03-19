@@ -14,6 +14,7 @@ export default {
 .divider {
   padding-left: $padding-vertical;
   padding-right: $padding-vertical;
+  padding-bottom: 10px;
   img {
     width: 100%;
   }

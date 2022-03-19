@@ -1,7 +1,16 @@
 <template>
   <div class="map">
-    <div></div>
     <div class="map-container" ref="gal">
+      <div class="location">
+        <img src="~@/assets/images/goose.png" class="goose" />
+        <div class="description">
+          location
+        </div>
+        <p class="black">
+          서울특별시 강남구 논현로 549<br />
+          더채플앳논현 6층 라포레홀<br /><br />
+        </p>
+      </div>
       <vue-daum-map
           :appKey="appKey"
           :center.sync="center"
@@ -51,8 +60,8 @@ export default {
     return {
       scrollX: 0,
       width: 320,
-      appKey: '13820f5d51d54f2bfb5203278b7bf8b9', // 테스트용 appkey
-      center: {lat: 37.4987, lng: 127.0316}, // 지도의 중심 좌표
+      appKey: '0eb0011898072edefda09e3c737acbb8', // 테스트용 appkey
+      center: {lat: 37.5050412, lng: 127.0343413}, // 지도의 중심 좌표
       level: 3, // 지도의 레벨(확대, 축소 정도),
       mapTypeId: VueDaumMap.MapTypeId.NORMAL, // 맵 타입
       libraries: ["drawing"], // 추가로 불러올 라이브러리
@@ -85,11 +94,11 @@ export default {
     },
     makeUrls() {
       // 장소데이터의 이름정보 불러온 뒤
-      const locationName = "힐링페이퍼"
+      const locationName = "더채플앳논현"
       this.tmapUrl = "tmap://search?name=" + locationName
-      this.kakaoTaxiUrl = "https://t.kakao.com/launch?type=taxi&amp;dest_lat=37.49878007763176&amp;dest_lng=127.03170076652506&amp;ref=localweb"
-      this.navermapUrl = "nmap://search?query=" + locationName + "&appname=kimyoon21.github.io/wedding"
-      this.kakaomapUrl = "kakaomap://search?q=" + locationName
+      this.kakaoTaxiUrl = "https://t.kakao.com/launch?type=taxi&amp;dest_lat=37.5050412&amp;dest_lng=127.0343413&amp;ref=localweb"
+      this.navermapUrl = "nmap://search?query=" + locationName + "&appname=shhs20220813.github.io/wedding"
+      this.kakaomapUrl = "kakaomap://place?id=1992754829"
     }
   }
 };
@@ -98,8 +107,8 @@ export default {
 <style lang="scss" scoped>
 
 .map {
-  margin-top: 18px;
-  margin-bottom: 18px;
+  margin-top: 8px;
+  margin-bottom: 28px;
 }
 
 .navi-apps {
@@ -129,6 +138,37 @@ export default {
 
 .link {
   color: #295238;
+}
+
+.location {
+  // padding-bottom: 30px;
+  padding-left: $padding-vertical;
+  padding-right: $padding-vertical;
+  text-align: center;
+  color: #295138;
+  .description {
+    font-size: 12px;
+    letter-spacing: 6px;
+    margin-bottom: 30px;
+    color: #295138;
+  }
+  
+  .h2 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 24px;
+  }
+  p {
+    line-height: 24px;
+    &.black {
+      color: #202121;
+    }
+  }
+  .goose {
+    width: 90px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
 }
 
 </style>

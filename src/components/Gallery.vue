@@ -55,7 +55,7 @@ export default {
 
 <style lang="scss" scoped>
 .gallery {
-  padding-top: 32px;
+  padding-top: 22px;
   padding-bottom: 50px;
   padding-left: $padding-vertical;
   padding-right: $padding-vertical;

@@ -4,25 +4,23 @@
   <div id="kyong">
     <FlowerRain />
     <Intro />
-    <Live />
+    <Divider />
+    <Wellcome />
     <Divider />
     <Gallery />
     <Divider />
-    <Celebrate @click="handleClick" :presents="presents" />
-    <Divider />
     <Map />
     <Divider />
-    <Funding />
+    <Contact />
     <Divider />
   </div>
 </template>
 
 <script>
 import Intro from "./components/Intro.vue"
-import Live from "./components/Live.vue";
+import Wellcome from "./components/Wellcome.vue";
 import Gallery from "./components/Gallery.vue";
-import Funding from "./components/Funding.vue";
-import Celebrate from "./components/Celebrate.vue";
+import Contact from "./components/Contact.vue";
 import Map from "./components/Map.vue";
 import FlowerRain from "./components/FlowerRain.vue";
 
@@ -30,10 +28,9 @@ export default {
   name: "App",
   components: {
     Intro,
-    Live,
+    Wellcome,
     Gallery,
-    Funding,
-    Celebrate,
+    Contact,
     FlowerRain,
     Map,
   },

@@ -3,6 +3,7 @@
     <div class="image">
       <img src="~@/assets/images/intro-image.png" />
     </div>
+    <audio src="~@/assets/media/bgm.mp3" autoplay loop />
   </div>
 </template>
 
@@ -36,32 +37,35 @@ export default {
 
 <style lang="scss" scoped>
 .intro {
-  display: flex;
-  flex-direction: column;
-  height: 80vh;
-  max-height: 780px;
-  background-color: #ffffff;
-  font-size: 0;
+  // display: flex;
+  // padding-top: 80px;
+  // flex-direction: column;
+  height: 100vh;
+  line-height: 100vh;
+  // min-height: 500px;
+  // max-height: 780px;
+  // background-color: #ffffff;
+  // font-size: 0;
   .image {
-    display: flex;
-    flex: 1;
-    padding-left: $padding-vertical;
-    padding-right: $padding-vertical;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 25vh;
+    // display: flex;
+    // flex: 1;
+    // padding-left: $padding-vertical;
+    // padding-right: $padding-vertical;
+    // justify-content: center;
+    
+    // vertical-align: middle;
+    // align-items: flex-start;
+    // margin-top: 25vh;
+
+    // position: absolute;
+    // top: 50%;
+    // margin-top: -188px;
+    // vertical-align: middle;
+
     img {
       max-width: 100%;
       max-height: 100%;
-    }
-  }
-  .movie {
-    //todo: 실제론 iframe 아니라 video 태그 넣을거임. 임시로 유튜브 넣어둠
-    video {
-      width: 100vw;
-      height: 100vw;
-      max-width: 460px;
-      max-height: 460px;
+      vertical-align: middle;
     }
   }
 }
