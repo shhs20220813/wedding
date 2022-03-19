@@ -107,7 +107,7 @@ export default {
 <style lang="scss" scoped>
 
 .map {
-  margin-top: 8px;
+  margin-top: 18px;
   margin-bottom: 28px;
 }
 

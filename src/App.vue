@@ -1,7 +1,7 @@
 
 
 <template>
-  <div id="kyong">
+  <div id="shhs">
     <FlowerRain />
     <Intro />
     <Divider />
@@ -196,7 +196,7 @@ button {
 * {
   box-sizing: border-box;
 }
-#kyong {
+#shhs {
   font-family: "Cafe24Oneprettynight", sans-serif;
   max-width: 460px;
   margin: 0 auto;

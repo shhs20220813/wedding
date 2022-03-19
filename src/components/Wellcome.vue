@@ -40,7 +40,7 @@ export default {
 
 <style lang="scss" scoped>
 .wellcome {
-  padding-top: 4px;
+  padding-top: 14px;
   padding-left: $padding-vertical;
   padding-right: $padding-vertical;
   text-align: center;

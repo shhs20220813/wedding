@@ -36,7 +36,7 @@ export default {
 
 <style lang="scss" scoped>
 .funding {
-  padding-top: 38px;
+  padding-top: 48px;
   padding-left: $padding-vertical;
   padding-right: $padding-vertical;
   text-align: center;

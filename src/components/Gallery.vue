@@ -8,7 +8,7 @@
     <div class="gallery-container" ref="gal">
       <div class="gallery-inner">
         <div class="gallery-item" v-for="n in 13" :key="n">
-          <div class="image">
+          <div class="image"> <!-- 888 1080 -->
             <img
               :src="`/wedding/gallery/${n - 1}.jpg`"
               :style="{
@@ -55,7 +55,7 @@ export default {
 
 <style lang="scss" scoped>
 .gallery {
-  padding-top: 22px;
+  padding-top: 32px;
   padding-bottom: 50px;
   padding-left: $padding-vertical;
   padding-right: $padding-vertical;
