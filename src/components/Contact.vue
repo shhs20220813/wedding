@@ -9,6 +9,7 @@
     </h2>
     <p>
       <span>아버지</span> &nbsp; <a href="tel:01021138109">천경민<img src="~@/assets/images/tel.png" class="tel" /></a><br />
+      <span class="account" @click='copyToClipBoard("59860204110770")'>국민 598602-04-110770</span><br />
       <span>어머니</span> &nbsp; <a href="tel:01095648880">이인향<img src="~@/assets/images/tel.png" class="tel" /></a><br />
       <span>신랑</span> &nbsp; <a href="tel:01072889018">천희수<img src="~@/assets/images/tel.png" class="tel" /></a><br />
     </p>
@@ -19,6 +20,7 @@
     </h2>
     <p>
       <span>아버지</span> &nbsp; <a href="tel:01088146163">송재흥<img src="~@/assets/images/tel.png" class="tel" /></a><br />
+      <span class="account" @click='copyToClipBoard("17365252068075")'>농협 173652-52-068075</span><br />
       <span>어머니</span> &nbsp; <a href="tel:01030295361">배은정<img src="~@/assets/images/tel.png" class="tel" /></a><br />
       <span>신부</span> &nbsp; <a href="tel:01042051128">송수현<img src="~@/assets/images/tel.png" class="tel" /></a><br />
     </p>
@@ -30,6 +32,18 @@
 export default {
   name: "Divider",
   methods: {
+    copyToClipBoard(text) {
+      this.$copyText(text);
+      return this.$swal({
+          toast: true,
+          position: 'center-center',
+          showConfirmButton: false,
+          timer: 1500,
+          timerProgressBar: true,
+          icon: 'success',
+          title: '복사를 완료했습니다.',
+      })
+    }
   },
 };
 </script>
@@ -61,7 +75,10 @@ export default {
     line-height: 24px;
     color: #202121;
     span {
-      font-size: 13px;
+      font-size: 14px;
+    }
+    span.account {
+      color: #295138;
     }
   }
   .link {
@@ -75,7 +92,7 @@ export default {
     color: #295138;
     .tel {
       vertical-align: middle;
-      width: 14px;
+      width: 15px;
     }
   } 
   a:hover { 

@@ -7,10 +7,10 @@
     <div></div>
     <div class="gallery-container" ref="gal">
       <div class="gallery-inner">
-        <div class="gallery-item" v-for="n in 13" :key="n">
+        <div class="gallery-item" v-for="n in 12" :key="n">
           <div class="image"> <!-- 888 1080 -->
             <img
-              :src="`/wedding/gallery/${n - 1}.jpg`"
+              :src="`/wedding/gallery/${n - 1}.jpg?v=2`"
               :style="{
                 transform: `translateX(${(((scrollX - (n - 1) * 250) / 4.8 +
                   50 >
@@ -48,7 +48,7 @@ export default {
       document.documentElement.clientWidth || 0,
       window.innerWidth || 0
     );
-    this.$refs.gal.scrollLeft = 850;
+    // this.$refs.gal.scrollLeft = 850;
   },
 };
 </script>
@@ -72,19 +72,20 @@ export default {
     margin-bottom: 30px;
   }
   .gallery-container {
-    padding-left: 50%;
-    padding-right: 50%;
+    padding-left: 10%;
+    padding-right: 10%;
     margin-left: -22px;
     margin-right: -22px;
     overflow-x: auto;
     .gallery-inner {
       display: flex;
-      width: 3370px;
+      width: 2990px; // 3250
       .gallery-item {
         flex: 0 0 240px;
         position: relative;
         width: 240px;
-        height: 360px;
+        // height: 360px;
+        height: 444px;
         margin-right: 10px;
         &:before {
           position: absolute;
@@ -93,7 +94,7 @@ export default {
           display: block;
           content: "";
           width: 2px;
-          height: 360px;
+          height: 444px;
           background-color: #fffdf9;
           z-index: 11;
         }
@@ -104,7 +105,7 @@ export default {
           display: block;
           content: "";
           width: 2px;
-          height: 360px;
+          height: 444px;
           background-color: #fffdf9;
           z-index: 11;
         }
@@ -113,7 +114,7 @@ export default {
           top: 0;
           left: 0;
           width: 240px;
-          height: 360px;
+          height: 444px;
           background-image: url("~@/assets/images/arch.png");
           background-repeat: no-repeat;
           background-size: 240px auto;
@@ -125,12 +126,12 @@ export default {
           top: 0;
           left: 0;
           width: 240px;
-          height: 360px;
+          height: 444px;
           overflow: hidden;
           img {
             transition: transform 100ms;
             width: 296px;
-            height: 360px;
+            height: 444px;
           }
         }
       }

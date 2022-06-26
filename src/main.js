@@ -6,11 +6,14 @@ import Button from './components/Button.vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import VueClipboard from 'vue-clipboard2'
+import VueSweetalert2 from 'vue-sweetalert2'
+import 'sweetalert2/dist/sweetalert2.min.css'
 
 Vue.config.productionTip = false
 
 Vue.use(VScrollLock)
 Vue.use(VueClipboard)
+Vue.use(VueSweetalert2)
 Vue.component('Divider', Divider)
 Vue.component('Button', Button)
 
