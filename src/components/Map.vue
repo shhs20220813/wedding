@@ -6,7 +6,7 @@
         <div class="description">
           location
         </div>
-        <p class="black">
+        <p class="black" @click='copyToClipBoard("서울특별시 강남구 논현로 549 더채플앳논현 6층 라포레홀")'>
           서울특별시 강남구 논현로 549<br />
           더채플앳논현 6층 라포레홀<br /><br />
         </p>
@@ -99,6 +99,17 @@ export default {
       this.kakaoTaxiUrl = "https://t.kakao.com/launch?type=taxi&amp;dest_lat=37.5050412&amp;dest_lng=127.0343413&amp;ref=localweb"
       this.navermapUrl = "nmap://search?query=" + locationName + "&appname=shhs20220813.github.io/wedding"
       this.kakaomapUrl = "kakaomap://place?id=1992754829"
+    },
+    copyToClipBoard(text) {
+      this.$copyText(text);
+      return this.$swal({
+          toast: true,
+          position: 'center-center',
+          showConfirmButton: false,
+          timer: 1500,
+          icon: 'success',
+          title: '주소가 복사되었습니다.',
+      })
     }
   }
 };

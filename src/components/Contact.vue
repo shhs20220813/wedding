@@ -9,7 +9,7 @@
     </h2>
     <p>
       <span>아버지</span> &nbsp; <a href="tel:01021138109">천경민<img src="~@/assets/images/tel.png" class="tel" /></a><br />
-      <span class="account" @click='copyToClipBoard("59860204110770")'>국민 598602-04-110770</span><br />
+      <span class="account" @click='copyToClipBoard("01021138109")'>우리 01021138109</span><br />
       <span>어머니</span> &nbsp; <a href="tel:01095648880">이인향<img src="~@/assets/images/tel.png" class="tel" /></a><br />
       <span>신랑</span> &nbsp; <a href="tel:01072889018">천희수<img src="~@/assets/images/tel.png" class="tel" /></a><br />
     </p>
@@ -39,9 +39,8 @@ export default {
           position: 'center-center',
           showConfirmButton: false,
           timer: 1500,
-          timerProgressBar: true,
           icon: 'success',
-          title: '복사를 완료했습니다.',
+          title: '계좌번호가 복사되었습니다.',
       })
     }
   },
