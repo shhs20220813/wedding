@@ -9,7 +9,7 @@
     </h2>
     <p>
       <span>아버지</span> &nbsp; <a href="tel:01021138109">천경민<img src="~@/assets/images/tel.png" class="tel" /></a><br />
-      <span class="account" @click='copyToClipBoard("01021138109")'>우리 01021138109</span><br />
+      <span class="account" @click='copyToClipBoard("83890204355037")'>국민 838902-04-355037</span><br />
       <span>어머니</span> &nbsp; <a href="tel:01095648880">이인향<img src="~@/assets/images/tel.png" class="tel" /></a><br />
       <span>신랑</span> &nbsp; <a href="tel:01072889018">천희수<img src="~@/assets/images/tel.png" class="tel" /></a><br />
     </p>
